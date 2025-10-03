@@ -18,11 +18,11 @@
 <header>Browser</header>
 
 <form id="searchForm">
-  <input type="text" id="query" placeholder="Search DuckDuckGo..." required>
+  <input type="text" id="query" placeholder="Search..." required>
   <button type="submit">Go</button>
 </form>
 
-<iframe id="resultsFrame" src="https://duckduckgo.com/" title="Search Results"></iframe>
+<iframe id="resultsFrame" src="https://eviltester.github.io/TestingApp/apps/iframe-search/iframe-search.html" title="Search Results"></iframe>
 
 <script>
   const form = document.getElementById('searchForm');
@@ -32,7 +32,8 @@
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     const query = encodeURIComponent(queryInput.value);
-    iframe.src = `https://duckduckgo.com/?q=${query}`;
+    // Pass query to iFramed Search Engine via URL parameter
+    iframe.src = `https://eviltester.github.io/TestingApp/apps/iframe-search/iframe-search.html?q=${query}`;
   });
 </script>
 
