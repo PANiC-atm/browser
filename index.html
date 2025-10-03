@@ -18,11 +18,11 @@
 <header>Browser</header>
 
 <form id="searchForm">
-  <input type="text" id="query" placeholder="Search Google..." required>
+  <input type="text" id="query" placeholder="Search DuckDuckGo..." required>
   <button type="submit">Go</button>
 </form>
 
-<iframe id="resultsFrame" src=""></iframe>
+<iframe id="resultsFrame" src="https://duckduckgo.com/" title="Search Results"></iframe>
 
 <script>
   const form = document.getElementById('searchForm');
@@ -32,8 +32,7 @@
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     const query = encodeURIComponent(queryInput.value);
-    // pws=0 requests non-personalized results
-    iframe.src = `https://www.google.com/search?q=${query}&pws=0`;
+    iframe.src = `https://duckduckgo.com/?q=${query}`;
   });
 </script>
 
