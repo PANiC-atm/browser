@@ -3,15 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Safe Search</title>
+<title>Embedded Proxy</title>
+<style>
+  body, html { margin:0; height:100%; }
+  iframe { width:100%; height:100%; border:none; }
+</style>
 </head>
 <body>
-<h1>Safe Search</h1>
-<form action="https://www.google.com/search" method="get" target="_blank">
-  <input type="text" name="q" placeholder="Search Google..." required>
-  <input type="hidden" name="pws" value="0">
-  <button type="submit">Search</button>
-</form>
-<p>Search results will open in a new tab.</p>
+<iframe src="https://hide.me/en/proxy" title="Proxy"></iframe>
 </body>
 </html>
